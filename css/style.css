@@ -1,0 +1,307 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+body{
+  font-family: "Yu Gothic Medium", "游ゴシック　Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ　Pro W3", sans-sans-serif;
+	color: #333333;
+	background-color: whitesmoke;
+	font-size: 100%;/* ユーザが設定したフォントサイズが正しく反映 */
+	line-height: 1.7;/* 行間の高さ */
+	-webkit-text-size-adjust: 100%;/* スマートフォン対策 */
+}
+
+* {
+  box-sizing: border-box;/* 要素がはみ出さないように */
+}
+
+/* 画像の大きさを最適化 */
+img {
+  max-width: 100%;
+  height: auto;
+  }
+
+/* 下線をなくす */
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  border-top: 6px solid  #6CC6C4;
+}
+
+.container {
+  margin: 0 auto;
+  width: 60rem;
+}
+/* HEADER */
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3rem;
+}
+
+.call {
+  display: flex;
+  flex-direction: column;
+}
+
+.discription {
+  font-size: 0.7rem;
+}
+
+.header-adress {
+  font-size: 1.2rem;
+}
+
+.checklist li {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.fa-phone-volume {
+  color: #1f4797;
+  padding-right: 0.5rem;
+}
+
+.time {
+  border: 1px solid gray ;
+  font-size: 0.8rem;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+.main-nav a {
+  display: block;
+  width: 12rem;
+  height: 4.5rem;
+  padding: 8px 5px;
+  font-size: 1.2rem;
+  background: #95DFDD;
+  text-align:center;
+  color:#fff;
+}
+
+.main-nav a:hover {
+  background:#1f4797;
+  transition:.3s;
+}
+
+.cv{
+  padding: 5px 5px 3px;
+  border: 0.08rem solid silver;
+}
+.cv span{
+  display:block;
+  font-size: 0.8rem;
+}
+
+.rad1 {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.rad2 {
+  border-radius: 0 1rem 1rem 0;
+}
+
+.item {
+  flex-grow: 1;
+}
+
+/* MAIN */
+.main {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+article {
+  width: 67%;
+}
+
+.news{
+  padding: 1rem 1rem;
+  background-color: white;
+}
+.news h2 {
+  font-size: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
+  border-bottom: 2px solid blue;
+}
+
+dl {
+  overflow: hidden;
+}
+
+dt {
+  float: left;
+  font-weight: bold;
+  padding-top: 1.1rem;
+  font-size: 0.8rem;
+}
+
+dd {
+  padding: 1rem 0 1rem 9.2rem;
+  border-bottom: 0.8px solid gray;
+  font-size: 0.8rem;
+}
+
+aside {
+  width: 30%;
+}
+
+/* サイドバー */
+
+.intro h2 {
+  background-color: #95DFDD;
+  color: #fff;
+  border-radius: 0.2rem 0.2rem 0 0;
+  padding-left: 0.8rem;
+}
+
+.intro {
+  margin-bottom: 1em;
+}
+
+.care {
+  background-color: white;
+  border: 1px solid lightblue;
+  padding: 0 1rem;
+  height: 14rem;
+  font-weight: bold;
+}
+
+.list {
+  list-style: circle;
+  margin: 0 0.8rem;
+  border-bottom: 1px solid blue;
+}
+
+.list a {
+  display: block;
+  padding: 0.6rem 0.6rem 0.6rem 0;
+  color: black;
+}
+
+.list a:hover {
+  color: lightblue;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 1.5rem;
+}
+
+.sub-info {
+  display: flex;
+  background-color: lightskyblue;
+}
+
+.sub-info li {
+  list-style: circle;
+  margin-left: 2rem;
+}
+
+.sub-info a {
+  color: white;
+}
+
+.sub-info a:hover {
+  text-decoration: underline;
+}
+
+.tel {
+  border-bottom: 1px solid blue;
+  padding-left: 27rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.tel span {
+  font-weight: bold;
+}
+
+.copy {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 0.3rem;
+}
+
+/* モバイル版 */
+@media (max-width: 600px) {
+  .container {
+    margin: auto;
+    width: auto;
+  }
+  /* HEADER */
+  .info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .time {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0 0 0;
+  }
+
+  .main-nav a {
+    width: auto;
+  }
+
+  .main-nav li {
+    width: 10rem;
+    margin: auto;
+  }
+
+  .cv {
+    border-radius: 0;
+  }
+
+
+  .main {
+    flex-direction: column;
+  }
+  article {
+    width: 100%;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  footer {
+    margin: 0;
+  }
+
+  .sub-info li {
+    padding: 0;
+  }
+
+  .tel {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .sub-info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+
